@@ -43,12 +43,7 @@ class App extends Component {
     if (item.songname === "" || item.songwriter === "") {
       return alert("Enter Details");
     } else {
-      let initial_state = {
-        songname: "",
-        songwriter: "",
-        singer: "",
-        Release_Date: ""
-      };
+      let initial_state = { songname: "", songwriter: "", Release_Date: "" };
       let xmlhttp = new XMLHttpRequest();
       xmlhttp.open("POST", "http://localhost:8080/");
       xmlhttp.setRequestHeader("Content-Type", "application/json");
