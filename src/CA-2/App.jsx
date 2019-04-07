@@ -26,10 +26,27 @@ class App extends Component {
     }));
   }
 
+  componentDidMount() {
+    let xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", "http://localhost:8080/");
+    xmlhttp.send();
+    xmlhttp.onload = function() {
+      let serverData = JSON.parse(xmlhttp.responseText);
+      console.log(serverData);
+      this.setState({ TableData: serverData });
+      console.log(this.state.TableData);
+    }.bind(this);
+  }
+
   submitForm(item) {
     if (item.songname === "" || item.songwriter === "") {
       return alert("Enter Details");
     } else {
+      let initial_state = { songname: "", songwriter: "", Release_Date: "" };
+      let xmlhttp = new XMLHttpRequest();
+      xmlhttp.open("POST", "http://localhost:8080/");
+      xmlhttp.setRequestHeader("Content-Type", "application/json");
+      xmlhttp.send(JSON.stringify(item));
       let temp_array = [...this.state.TableData];
       console.log(temp_array);
       temp_array.push(item);
