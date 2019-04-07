@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-
 import Form from "./Form";
+import Navbar from "./Navbar";
 import "../App.css";
 
 class App extends Component {
@@ -46,6 +46,9 @@ class App extends Component {
   render() {
     return (
       <div>
+        <div>
+          <Navbar />
+        </div>
         <div className="m-4">
           <Form
             toggle={this.toggle}
