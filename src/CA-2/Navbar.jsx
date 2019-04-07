@@ -7,8 +7,10 @@ class Navbar extends Component {
   }
   render() {
     return (
-      <nav className="navbar navbar-light bg-light">
-        <span className="navbar-brand mb-0 h1">Song Book</span>
+      <nav className="navbar navbar-dark bg-secondary">
+        <span className="navbar-brand mb-0 h1" style={{ fontFamily: "Times" }}>
+          Song Book
+        </span>
       </nav>
     );
   }
