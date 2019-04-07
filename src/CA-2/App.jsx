@@ -10,12 +10,7 @@ class App extends Component {
     super(props);
     this.state = {
       TableData: [],
-      temp: {
-        songname: "",
-        songwriter: "",
-        singer: "",
-        Release_Date: ""
-      },
+
       modal: false
     };
     this.submitForm = this.submitForm.bind(this);
@@ -43,12 +38,6 @@ class App extends Component {
     if (item.songname === "" || item.songwriter === "") {
       return alert("Enter Details");
     } else {
-      let initial_state = {
-        songname: "",
-        songwriter: "",
-        singer: "",
-        Release_Date: ""
-      };
       let xmlhttp = new XMLHttpRequest();
       xmlhttp.open("POST", "http://localhost:8080/");
       xmlhttp.setRequestHeader("Content-Type", "application/json");
@@ -60,8 +49,7 @@ class App extends Component {
 
       this.setState({
         TableData: temp_array,
-        modal: false,
-        temp: initial_state
+        modal: false
       });
 
       console.log(item);

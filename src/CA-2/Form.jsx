@@ -55,7 +55,7 @@ class Form extends Component {
                     className="form-control sm"
                     placeholder="Enter Song Name"
                     name="songname"
-                    value={this.props.songname}
+                    value={this.state.songname}
                     onChange={this.handleChange}
                   />
                 </label>
@@ -69,7 +69,7 @@ class Form extends Component {
                     className="form-control sm "
                     placeholder="Enter Writer name"
                     name="songwriter"
-                    value={this.props.songwriter}
+                    value={this.state.songwriter}
                     onChange={this.handleChange}
                   />
                 </label>
@@ -83,7 +83,7 @@ class Form extends Component {
                     className="form-control sm "
                     placeholder="Enter Singer name"
                     name="singer"
-                    value={this.props.singer}
+                    value={this.state.singer}
                     onChange={this.handleChange}
                   />
                 </label>
@@ -97,7 +97,7 @@ class Form extends Component {
                     className="form-control sm "
                     placeholder="Enter Release Date"
                     name="Release_Date"
-                    value={this.props.Release_Date}
+                    value={this.state.Release_Date}
                     onChange={this.handleChange}
                   />
                 </label>
