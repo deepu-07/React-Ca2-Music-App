@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Form from "./Form";
 import Navbar from "./Navbar";
+import Table from "./Table";
+
 import "../App.css";
 
 class App extends Component {
@@ -55,6 +57,9 @@ class App extends Component {
             modal={this.state.modal}
             submitForm={this.submitForm}
           />
+        </div>
+        <div className="m-4">
+          <Table TableData={this.state.TableData} />
         </div>
       </div>
     );
