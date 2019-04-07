@@ -16,7 +16,8 @@ class Table extends Component {
               <tr>
                 <th>ID</th>
                 <th>SongName</th>
-                <th>SongWriter</th>
+                <th>Song Writer</th>
+                <th>Singer</th>
                 <th>Release Date</th>
               </tr>
             </thead>
@@ -27,6 +28,7 @@ class Table extends Component {
                     <th>{index + 1}</th>
                     <td>{details.songname}</td>
                     <td>{details.songwriter}</td>
+                    <td>{details.singer}</td>
                     <td>{details.Release_Date}</td>
                   </tr>
                 );

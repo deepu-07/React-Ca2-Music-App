@@ -7,6 +7,7 @@ class Form extends Component {
     this.state = {
       songname: "",
       songwriter: "",
+      singer: "",
       Release_Date: ""
     };
   }
@@ -66,9 +67,23 @@ class Form extends Component {
                   <input
                     type="text"
                     className="form-control sm "
-                    placeholder="Enter writer name"
+                    placeholder="Enter Writer name"
                     name="songwriter"
                     value={this.props.songwriter}
+                    onChange={this.handleChange}
+                  />
+                </label>
+              </div>
+              <div className="row">
+                <label className="m-2">
+                  Singer :
+                  <br />
+                  <input
+                    type="text"
+                    className="form-control sm "
+                    placeholder="Enter Singer name"
+                    name="singer"
+                    value={this.props.singer}
                     onChange={this.handleChange}
                   />
                 </label>
@@ -97,6 +112,7 @@ class Form extends Component {
                       this.setState({
                         songname: "",
                         songwriter: "",
+                        singer: "",
                         Release_Date: ""
                       })
                     );
